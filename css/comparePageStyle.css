@@ -1,0 +1,89 @@
+.compare {
+  color: var(--main-color);
+}
+
+.compare-section {
+  padding-top: 3rem;
+  padding-bottom: 1rem;
+
+  .compare-table {
+    width: 100%;
+    border-collapse: collapse;
+
+    tr :is(th, td) {
+      border: 2px solid var(--border-color);
+      padding: 0.5rem;
+    }
+  }
+}
+
+.compare-table tr td img {
+  width: 100%;
+}
+
+.compare-table .description {
+  font-size: 1rem;
+}
+
+.compare-table .colors td div {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  display: inline-block;
+  margin-left: 0.2rem;
+  text-align: center;
+
+  &:nth-child(1) {
+    background: orange;
+  }
+
+  &:nth-child(2) {
+    background: red;
+  }
+
+  &:nth-child(3) {
+    background: yellow;
+  }
+}
+
+.compare-table .stock td {
+  color: var(--main-color);
+}
+
+.compare-table .buy td button {
+  padding: 0.5rem 1.5rem;
+}
+
+.compare-table .remove td i:hover {
+  color: red;
+  cursor: pointer;
+}
+
+
+/* ===============================
+     Styling for responsiveness
+   =============================== */
+   
+@media (width <= 475px) {
+  .compare-section {
+    font-size: 0.9rem;
+
+    .description {
+      font-size: 0.9rem;
+    }
+
+    .colors td div {
+      width: 1.2rem;
+      height: 1.2rem;
+    }
+
+    .buy td button {
+      padding-top: 1.5rem;
+      padding-bottom: 1.5rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 0.7rem;
+    }
+  }
+}

@@ -1,0 +1,68 @@
+.login {
+  color: var(--main-color);
+}
+
+.auth-section {
+  padding-top: 3rem;
+  padding-bottom: 1.5rem;
+  display: flex;
+  column-gap: 1.6%;
+
+  .login-block,
+  .register-block {
+    width: 49%;
+    height: fit-content;
+    border: 2px solid var(--border-color);
+    border-radius: 0.3rem;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+
+    input {
+      height: 2.7rem;
+      font-size: var(--small-font-size);
+      border-radius: 0.3rem;
+
+      &::placeholder {
+        font-family: "Lato", sans-serif;
+        font-size: var(--small-font-size);
+        color: var(--text-color-lightest);
+      }
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+}
+
+.login-block button {
+  width: 6rem;
+}
+
+.register-block button {
+  width: 10rem;
+}
+
+
+/* ===============================
+     Styling for responsiveness
+   =============================== */
+
+@media (width <= 475px) {
+  .auth-section {
+    flex-direction: column;
+    row-gap: 1.5rem;
+
+    .login-block,
+    .register-block {
+      width: 100%;
+      padding: 1rem;
+
+      button {
+        width: 100%;
+      }
+    }
+  }
+}

@@ -1,0 +1,377 @@
+.product-section {
+  padding-top: 4rem;
+  display: flex;
+  column-gap: 1.5rem;
+}
+
+.product-section .product-images {
+  width: 45%;
+  display: flex;
+  gap: 0.7rem;
+  flex-wrap: wrap;
+
+  img {
+    width: 20%;
+  }
+
+  img:first-child {
+    width: 100%;
+  }
+}
+
+.product-section .product-info {
+  width: 55%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.5rem;
+
+  h1,
+  .prices h2 {
+    font-size: 2rem;
+  }
+
+  h1 + p {
+    margin-top: -0.3rem;
+  }
+
+  .prices + p {
+    font-size: 1rem;
+    align-items: justify;
+    color: var(--text-color-lightest);
+  }
+
+  :is(.promises, .extra-info) p {
+    margin-bottom: 0.5rem;
+    color: var(--text-color-lightest);
+  }
+
+  :is(.colors, .sizes) {
+    display: flex;
+    align-items: center;
+    column-gap: 1rem;
+    font-weight: bold;
+    color: var(--text-color-lightest);
+
+    div {
+      display: flex;
+      column-gap: 0.2rem;
+
+      span {
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.product-info .prices {
+  padding: 1rem 0;
+  display: flex;
+  column-gap: 1rem;
+  align-items: center;
+  border-top: 2px solid var(--border-color);
+  border-bottom: 2px solid var(--border-color);
+
+  p:nth-child(2) {
+    color: var(--text-color-lightest);
+    font-size: 1rem;
+  }
+
+  p:nth-child(3) {
+    color: var(--text-color-lightest);
+    font-size: 1.1rem;
+  }
+}
+
+.product-info .promises {
+  margin-top: 0.5rem;
+
+  p i {
+    margin-right: 0.5rem;
+  }
+}
+
+.product-info .colors div span {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+
+  &:nth-child(1) {
+    background: orange;
+  }
+
+  &:nth-child(2) {
+    background: red;
+  }
+
+  &:nth-child(3) {
+    background: yellow;
+  }
+
+  &:nth-child(4) {
+    background: pink;
+  }
+
+  &:nth-child(5) {
+    background: green;
+  }
+}
+
+.product-info .sizes div span {
+  border: 2px solid var(--border-color);
+  padding: 0.6rem 1rem;
+  font-weight: normal;
+
+  &:first-child {
+    background: var(--main-color);
+    color: var(--main-background);
+  }
+
+  &:hover {
+    background: var(--main-color);
+    color: var(--main-background);
+  }
+}
+
+.product-info .actions-box {
+  display: flex;
+  column-gap: 0.4rem;
+  padding-top: 0.5rem;
+
+  input {
+    width: 5rem;
+    height: 2.7rem;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  button {
+    padding: 0.5rem 2rem;
+  }
+
+  span {
+    padding: 0 1rem;
+    height: 2.7rem;
+    border: 2px solid var(--border-color);
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+}
+
+.product-info .extra-info {
+  margin-top: 2rem;
+  border-top: 2px solid var(--border-color);
+  padding-top: 1rem;
+
+  p {
+    span {
+      color: var(--text-color-lightest);
+      font-weight: normal;
+      margin-left: 0.5rem;
+    }
+  }
+}
+
+.additional-info-section {
+  padding-top: 4rem;
+
+  div {
+    display: flex;
+    column-gap: 1.5rem;
+
+    h3 {
+      cursor: pointer;
+      font-size: 1.2rem;
+    }
+
+    h3:first-child {
+      color: var(--main-color);
+    }
+
+    h3:hover {
+      color: var(--main-color);
+    }
+  }
+
+  table {
+    margin-top: 3rem;
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  table,
+  table td {
+    border: 2px solid var(--border-color);
+    padding: 0.5rem 1rem;
+    text-align: left;
+    font-size: 1rem;
+  }
+
+  table td:first-child {
+    color: var(--text-color-dark);
+  }
+}
+
+.additional-info-section .review-section {
+  padding-top: 1.5rem;
+  display: none;
+  flex-direction: column;
+  row-gap: 3rem;
+
+  ul {
+    width: 100%;
+  }
+
+  .reviews li {
+    display: flex;
+    column-gap: 2rem;
+    border-bottom: 2px solid var(--border-color);
+    padding: 1.5rem 0;
+  }
+}
+
+.reviews li .profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 0.5rem;
+
+  img {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+  }
+
+  p {
+    font-size: var(--small-font-size);
+    font-weight: bold;
+  }
+}
+
+.reviews li .review {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.6rem;
+  justify-content: center;
+
+  div {
+    display: flex;
+    column-gap: 0.1rem;
+    color: orange;
+    font-size: var(--small-font-size);
+  }
+
+  p:not(.date-time) {
+    font-size: 1.1rem;
+  }
+}
+
+.review-section .add-review {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.2rem;
+
+  h4 {
+    font-size: 1.2rem;
+  }
+
+  & > div {
+    display: flex;
+    column-gap: 0.2rem;
+  }
+
+  form {
+    padding-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+	
+    Textarea {
+      width: 100%;
+      height: 14rem;
+      border: 2px solid var(--border-color);
+      padding: 1rem;
+      font-family: "Lato", sans-serif;
+
+      &::placeholder {
+        font-size: 1rem;
+      }
+    }
+
+    div {
+      display: flex;
+      column-gap: 1rem;
+
+      input {
+        width: 50%;
+        height: 3rem;
+      }
+    }
+
+    :is(Textarea, div input):focus {
+      outline: none;
+    }
+
+    button {
+      width: 15%;
+    }
+  }
+}
+
+.related-product-section {
+  margin-top: 3rem;
+}
+.related-product-container {
+  margin-top: 1.5rem;
+  padding-bottom: 2rem;
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  gap: 1.5rem;
+
+  .card {
+    width: 20rem;
+    padding: 0.8rem 0.8rem 0.8rem 0.8rem;
+  }
+}
+
+
+/* ===============================
+     Styling for responsiveness
+   =============================== */
+   
+@media (width <= 1024px) {
+  .product-section .product-images {
+    height: 100%;
+  }
+}
+
+@media (width <= 475px) {
+  .product-section {
+    flex-direction: column;
+    row-gap: 2rem;
+
+    .product-images,
+    .product-info {
+      width: 100%;
+    }
+  }
+
+  .review-section .add-review {
+    form div {
+      flex-direction: column;
+      row-gap: 1rem;
+
+      input {
+        width: 100%;
+      }
+    }
+
+    form button {
+      width: 100%;
+    }
+  }
+}

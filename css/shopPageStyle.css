@@ -1,0 +1,52 @@
+.shop {
+  color: var(--main-color);
+}
+
+.items-section {
+  padding-top: 3.5rem;
+}
+
+.pagination {
+  padding-top: 3rem;
+
+  ul {
+    display: flex;
+    justify-content: center;
+    column-gap: 0.5rem;
+
+    li {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 2rem;
+      height: 2rem;
+      border-radius: 0.3rem;
+      cursor: pointer;
+
+      a {
+        font-size: var(--small-font-size);
+        font-weight: bold;
+      }
+
+      &:hover {
+        background: var(--main-color);
+
+        a {
+          color: var(--main-background);
+        }
+      }
+    }
+  }
+}
+
+.pagination ul li:first-child {
+  background: var(--main-color);
+
+  a {
+    color: var(--main-background);
+  }
+}
+
+.pagination ul li:last-child {
+  border-radius: 0.3rem 1rem 1rem 0.3rem;
+}
